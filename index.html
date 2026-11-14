@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pooled.gg: save together</title>
+<meta name="description" content="pooled.gg is a group savings layer for credit union prize-linked savings programs. Families, friends, coworkers and communities save together, each in their own credit union account.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://pooled.gg/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="pooled.gg">
+<meta property="og:url" content="https://pooled.gg/">
+<meta property="og:title" content="pooled.gg: save together">
+<meta property="og:description" content="A group savings layer for credit union prize-linked savings programs.">
+<meta property="og:image" content="https://pooled.gg/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="pooled.gg: Save together. A group savings layer for credit union prize-linked savings programs.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="pooled.gg: save together">
+<meta name="twitter:description" content="A group savings layer for credit union prize-linked savings programs.">
+<meta name="twitter:image" content="https://pooled.gg/og.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#1A0B2E;
+  --muted:#58486E;
+  --line:#E4DDEE;
+  --accent:#007168;
+  --accent-hover:#005C55;
+  --lav:#F6F2FA;
+  --gold:#F2B400;
+  --surface:#FFFFFF;
+  --radius:16px;
+  --gutter:20px;
+  --max:1120px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--surface);color:var(--ink);font:400 17px/1.6 "Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","Figtree",system-ui,sans-serif;font-weight:800;line-height:1.08;letter-spacing:-.02em;margin:0;color:var(--ink)}
+p{margin:0}
+a{color:var(--accent)}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:#fff;padding:12px 16px;border-radius:8px;z-index:10}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:var(--ink);font:800 20px/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em}
+.brand svg{width:40px;height:auto}
+.hdr-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;color:var(--accent);border:1px solid var(--line)}
+.hdr-cta:hover{border-color:var(--accent)}
+
+/* buttons */
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;font:600 16px/1 "Figtree",sans-serif;text-decoration:none;transition:background-color .15s,border-color .15s}
+.btn-primary{background:var(--accent);color:#fff;border:1px solid var(--accent)}
+.btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+.btn-ghost{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--ink)}
+
+/* hero */
+.hero{padding:48px 0 56px}
+.hero .wrap{display:grid;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:20px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.hero h1{font-size:clamp(52px,14vw,104px);letter-spacing:-.035em}
+.hero .lede{font-size:clamp(19px,4.6vw,23px);line-height:1.45;color:var(--muted);margin:20px 0 32px;max-width:30ch}
+.hero-mark{max-width:420px;width:100%;margin:0 auto}
+.hero-mark svg{width:100%;height:auto}
+
+/* sections */
+section{padding:64px 0}
+.alt{background:var(--lav);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kicker{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+h2{font-size:clamp(32px,7.5vw,48px)}
+.sub{color:var(--muted);margin-top:14px;max-width:56ch;font-size:18px}
+
+.steps{list-style:none;margin:40px 0 0;padding:0;display:grid;gap:16px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;counter-increment:s}
+.step::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--lav);border:1px solid var(--line);color:var(--accent);font:800 18px/1 "Bricolage Grotesque",sans-serif;margin-bottom:18px}
+.step h3{font-size:22px;margin-bottom:8px}
+.step p{color:var(--muted)}
+
+.trust{padding:28px 0}
+.trust ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.trust li{display:flex;align-items:flex-start;gap:12px;font-weight:600;line-height:1.4}
+.trust svg{flex:none;width:24px;height:24px;margin-top:-1px}
+
+.cu{display:grid;gap:40px}
+.cards{display:grid;gap:16px}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:var(--surface)}
+.card h3{font-size:21px;margin-bottom:8px}
+.card p{color:var(--muted)}
+.card .ico{width:44px;height:44px;border-radius:12px;background:var(--lav);display:grid;place-items:center;margin-bottom:16px}
+.card .ico svg{width:22px;height:22px}
+.pilot{margin-top:32px;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.pilot p{color:var(--muted)}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:40px 0 48px;color:var(--muted);font-size:15px}
+footer .wrap{display:grid;gap:20px}
+.f-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:600;color:var(--ink);background:var(--lav)}
+.badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.f-meta{display:flex;flex-wrap:wrap;gap:4px 20px;align-items:center}
+.f-meta a{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);font-weight:600;text-decoration:none}
+.f-meta a:hover{text-decoration:underline}
+
+@media (min-width:720px){
+  :root{--gutter:32px}
+  .hero{padding:80px 0 88px}
+  section{padding:96px 0}
+  .steps{grid-template-columns:repeat(3,1fr);gap:20px}
+  .trust{padding:32px 0}
+  .trust ul{grid-template-columns:repeat(3,1fr);gap:24px}
+  .cards{grid-template-columns:repeat(3,1fr);gap:20px}
+}
+@media (min-width:960px){
+  .hero .wrap{grid-template-columns:1.15fr .85fr;gap:56px}
+  .hero-mark{max-width:460px;margin:0 0 0 auto}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="pooled.gg home">
+      <svg viewBox="-1 -1 102 52" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="hg" x1="4" x2="96" y1="0" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF5A1F"/><stop offset=".5" stop-color="#FFC233"/><stop offset="1" stop-color="#00A396"/></linearGradient>
+          <clipPath id="hl"><rect x="-2" y="-2" width="52" height="56"/></clipPath>
+          <clipPath id="hr"><rect x="50" y="-2" width="52" height="56"/></clipPath>
+        </defs>
+        <path clip-path="url(#hl)" d="M50 25 C55 16 62 5.5 74 5.5 A19.5 19.5 0 0 1 74 44.5 C62 44.5 55 34 50 25 C45 16 38 5.5 26 5.5 A19.5 19.5 0 0 0 26 44.5 C38 44.5 45 34 50 25Z" fill="#00A396"/>
+        <path clip-path="url(#hr)" d="M50 25 C55 16 62 5.5 74 5.5 A19.5 19.5 0 0 1 74 44.5 C62 44.5 55 34 50 25 C45 16 38 5.5 26 5.5 A19.5 19.5 0 0 0 26 44.5 C38 44.5 45 34 50 25Z" fill="#F2B400"/>
+        <path d="M50 25 C55 16 62 5.5 74 5.5 A19.5 19.5 0 0 1 74 44.5 C62 44.5 55 34 50 25 C45 16 38 5.5 26 5.5 A19.5 19.5 0 0 0 26 44.5 C38 44.5 45 34 50 25Z" fill="none" stroke="url(#hg)" stroke-width="8" stroke-linejoin="round"/>
+      </svg>
+      pooled.gg
+    </a>
+    <a class="hdr-cta" href="mailto:hello@pooled.gg">Talk to us</a>
+  </div>
+</header>
+
+<main id="main">
+  <div id="top" class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">For credit unions</p>
+        <h1>Save together.</h1>
+        <p class="lede">A group savings layer for credit union prize-linked savings programs.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="mailto:hello@pooled.gg">Talk to us</a>
+          <a class="btn btn-ghost" href="#how">How it works</a>
+        </div>
+      </div>
+      <div class="hero-mark">
+        <svg viewBox="-1 -1 102 52" role="img" aria-label="The pooled.gg pool mark: two joined loops, one teal and one gold, each partly filled" focusable="false">
+          <defs>
+            <linearGradient id="xg" x1="4" x2="96" y1="0" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FF5A1F"/><stop offset=".5" stop-color="#FFC233"/><stop offset="1" stop-color="#00A396"/></linearGradient>
+            <clipPath id="xc"><path d="M50 25 C55 16 62 5.5 74 5.5 A19.5 19.5 0 0 1 74 44.5 C62 44.5 55 34 50 25 C45 16 38 5.5 26 5.5 A19.5 19.5 0 0 0 26 44.5 C38 44.5 45 34 50 25Z"/></clipPath>
+            <clipPath id="xl"><rect x="-2" y="-2" width="52" height="56"/></clipPath>
+            <clipPath id="xr"><rect x="50" y="-2" width="52" height="56"/></clipPath>
+          </defs>
+          <path d="M50 25 C55 16 62 5.5 74 5.5 A19.5 19.5 0 0 1 74 44.5 C62 44.5 55 34 50 25 C45 16 38 5.5 26 5.5 A19.5 19.5 0 0 0 26 44.5 C38 44.5 45 34 50 25Z" fill="#F7F3FB"/>
+          <g clip-path="url(#xc)">
+            <g clip-path="url(#xl)"><path d="M-5 17 C10 14 20 14 30 17 S50 20 60 17 S90 14 105 17 V60 H-5Z" fill="#00A396"/></g>
+            <g clip-path="url(#xr)"><path d="M-5 21 C10 18 20 18 30 21 S50 24 60 21 S90 18 105 21 V60 H-5Z" fill="#F2B400"/></g>
+          </g>
+          <path d="M50 25 C55 16 62 5.5 74 5.5 A19.5 19.5 0 0 1 74 44.5 C62 44.5 55 34 50 25 C45 16 38 5.5 26 5.5 A19.5 19.5 0 0 0 26 44.5 C38 44.5 45 34 50 25Z" fill="none" stroke="url(#xg)" stroke-width="8" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <section id="how" class="alt" aria-labelledby="how-h">
+    <div class="wrap">
+      <p class="kicker">How it works</p>
+      <h2 id="how-h">Three steps. Your program stays yours.</h2>
+      <ol class="steps">
+        <li class="step">
+          <h3>Form a group</h3>
+          <p>Family, friends, coworkers, a community. Anyone who wants to save alongside people they know.</p>
+        </li>
+        <li class="step">
+          <h3>Each member saves in their own account</h3>
+          <p>Every deposit goes into the member's own credit union account. Nothing is pooled, transferred or shared.</p>
+        </li>
+        <li class="step">
+          <h3>Progress together, rewards together</h3>
+          <p>The group sees shared progress and unlocks group rewards from the credit union.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="trust" role="region" aria-label="Our commitments">
+    <div class="wrap">
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#007168" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>pooled.gg never holds or moves money</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#007168" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Built on your existing program rules</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#007168" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Private by default: groups see progress, not balances</li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="credit-unions" class="alt" aria-labelledby="cu-h">
+    <div class="wrap cu">
+      <div>
+        <p class="kicker">For credit unions</p>
+        <h2 id="cu-h">Growth that comes from your members.</h2>
+        <p class="sub">pooled.gg sits on top of the prize-linked savings program you already run. You keep your drawings and your rules. We bring the group.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#007168" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.4 3.2-5.5 6.5-5.5s5.9 2.1 6.5 5.5"/><path d="M16 4.8a3.5 3.5 0 0 1 0 6.4M18.5 14.8c1.7.8 2.7 2.6 3 5.2"/></svg></div>
+          <h3>Members bring members</h3>
+          <p>Groups invite the people they already save with, so new members arrive through someone they trust.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#007168" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M8.5 15l2.3 2.3 4.7-4.6"/></svg></div>
+          <h3>More members saving every month</h3>
+          <p>Shared progress gives people a reason to keep making deposits, month after month.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#007168" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+          <h3>A monthly file, not an integration</h3>
+          <p>For a pilot, a simple monthly file is all we need. No core banking integration.</p>
+        </div>
+      </div>
+      <div class="pilot">
+        <p>We're looking for one credit union to pilot with.</p>
+        <a class="btn btn-primary" href="mailto:hello@pooled.gg">Talk to us</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <span class="badge">Concept · pre-launch</span>
+    </div>
+    <div class="f-meta">
+      <span>POOLEDGG LLC, Chicago</span>
+      <a href="mailto:hello@pooled.gg">hello@pooled.gg</a>
+      <span>© 2026</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
